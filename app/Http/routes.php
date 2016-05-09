@@ -15,6 +15,13 @@ Route::get('/', 'LogController@create');
 
 Route::resource('log', 'LogController');
 
-Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'web'), function () {
-    Route::get('logs', 'LogController@index');
+Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'manager'), function () {
+	Route::get('logs', 'LogController@index');
+});
+
+Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'manager'), function () {
+	Route::get('users', ['as' => 'admin.user.index', 'uses' => 'UsersController@index']);
+	Route::get('roles', 'RolesController@index');
+	Route::get('roles/create', 'RolesController@create');
+	Route::post('roles/create', 'RolesController@store');
 });
