@@ -15,6 +15,7 @@ Route::resource('log', 'LogController');
 
 Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'), function () {
 	Route::get('logs', 'LogController@index');
+	Route::get('logs/author/{id}', 'LogController@author');
 });
 
 Route::group(array('middleware' => 'auth'), function () {

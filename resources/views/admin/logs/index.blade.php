@@ -30,7 +30,7 @@
                         <tr>
                             <td>{!! $log->id !!}</td>
                             <td>{!! $log->date !!}</td>
-                            <td>{!! $log->name !!}</td>
+                            <td><a href="{!! url('/admin/logs/author/'. $log->name) !!}">{!! $log->name !!}</a></td>
                             <td>{!! $log->done !!}</td>
                             <td>{!! $log->future !!}</td>
                         </tr>
