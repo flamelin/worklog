@@ -11,10 +11,14 @@
 |
  */
 
-Route::get('/', 'LogController@create');
-
 Route::resource('log', 'LogController');
 
-Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'web'), function () {
-    Route::get('logs', 'LogController@index');
+Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'), function () {
+	Route::get('logs', 'LogController@index');
 });
+
+Route::group(array('middleware' => 'auth'), function () {
+	Route::get('/', 'LogController@create');
+});
+
+Route::auth();
