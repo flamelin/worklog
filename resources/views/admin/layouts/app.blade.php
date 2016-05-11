@@ -50,6 +50,7 @@
                     <li><a href="{{ url('/') }}">新增日誌</a></li>
                     <li><a href="{{ url('/admin/logs') }}">日誌管理</a></li>
                     <li><a href="{{ url('/admin/users') }}">使用者管理</a></li>
+                    <li><a href="{{ url('/admin/roles') }}">權限角色管理</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
