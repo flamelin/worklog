@@ -47,7 +47,8 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">新增日誌</a></li>
+                    <li><a href="{{ url('/admin/logs') }}">日誌管理</a></li>
                     <li><a href="{{ url('/admin/users') }}">使用者管理</a></li>
                 </ul>
 
