@@ -12,7 +12,7 @@ class LogController extends Controller
 {
     public function index()
     {
-        $logs = Log::all();
+        $logs = Log::orderBy('id', 'desc')->get();
         return view('admin.logs.index', compact('logs'));
     }
 
