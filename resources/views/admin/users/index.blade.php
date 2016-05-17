@@ -12,7 +12,7 @@
                 </div>
             @endif
             @if ($users->isEmpty())
-                <p>There is no user.</p>
+                <p>目前沒有任何使用者。</p>
             @else
                 <table class="table">
                     <thead>
