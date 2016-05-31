@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LogFormRequest;
 use App\Log;
 use Illuminate\Http\Request;
+use Auth;
 
 // use App\Http\Requests;
 
@@ -35,7 +36,12 @@ class LogController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store(LogFormRequest $request) {
-		$log = new Log($request->all());
+		$log = new Log([
+			'done' => $request->done,
+			'future' => $request->future,
+			'date' => $request->date,
+			'user_id' => Auth::user()->id
+		]);
 		$log->save();
 
 		return redirect('/log/create')->with('status', '工作日誌新增成功');

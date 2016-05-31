@@ -24,7 +24,7 @@ class LogFormRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required|min:3',
+            'user_id' => 'integer',
             'done' => 'required|min:10',
             'future' => 'required|min:10',
             'date' => 'required',

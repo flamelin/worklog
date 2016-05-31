@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Log extends Model
 {
-    protected $fillable = ['name', 'date', 'done', 'future'];
+    protected $fillable = ['user_id', 'date', 'done', 'future'];
 }
