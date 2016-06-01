@@ -18,7 +18,7 @@ class LogController extends Controller
 
     public function author($id)
     {
-        $logs = Log::where('name', $id)->get();
+        $logs = Log::whereUserId($id)->get();
         return view('admin.logs.index', compact('logs'));
     }
 }
