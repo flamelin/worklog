@@ -9,7 +9,7 @@ use Auth;
 
 // use App\Http\Requests;
 
-class LogController extends Controller {
+class LogsController extends Controller {
 	/**
 	 * Display a listing of the resource.
 	 *

@@ -11,15 +11,15 @@
 |
  */
 
-Route::resource('log', 'LogController');
+Route::resource('log', 'LogsController');
 
 Route::group(array('middleware' => 'auth'), function () {
-    Route::get('/', 'LogController@create');
+    Route::get('/', 'LogsController@create');
 });
 
 Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'manager'), function () {
-    Route::get('logs', 'LogController@index');
-    Route::get('logs/author/{id}', 'LogController@author');
+    Route::get('logs', 'LogsController@index');
+    Route::get('logs/author/{id}', 'LogsController@author');
 
     Route::get('users', 'UsersController@index');
     Route::get('roles', 'RolesController@index');
