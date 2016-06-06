@@ -27,7 +27,7 @@
                     @foreach($users as $user)
                         <tr>
                             <td>{!! $user->id !!}</td>
-                            <td><a href="{!! url('/admin/logs/author/'. $user->name) !!}">{!! $user->name !!}</a></td>
+                            <td><a href="{!! url('/admin/logs/author/'. $user->id) !!}">{!! $user->name !!}</a></td>
                             <td>{!! $user->email !!}</td>
                             <td>{!! $user->created_at !!}</td>
                         </tr>
