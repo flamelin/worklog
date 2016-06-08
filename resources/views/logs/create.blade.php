@@ -67,4 +67,6 @@
     </form>
 </div>
 
+{!! env('LOG_NOTE') !!}
+
 @endsection
