@@ -25,8 +25,8 @@ class LogFormRequest extends Request
     {
         return [
             'user_id' => 'integer',
-            'done' => 'required|min:10',
-            'future' => 'required|min:10',
+            'done' => 'required|min:5',
+            'future' => 'required|min:3',
             'date' => 'required',
         ];
     }
