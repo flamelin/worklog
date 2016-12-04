@@ -29,7 +29,7 @@
             <label for="name" class="col-sm-3 control-label">姓名</label>
 
             <div class="col-sm-6">
-                <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control" readonly="" ="readonly="" ">
+                <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control" readonly="readonly">
             </div>
         </div>
 
