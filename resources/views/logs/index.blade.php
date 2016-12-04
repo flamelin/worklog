@@ -12,7 +12,6 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>ID</th>
                         <th>日期</th>
                         <th>完成</th>
                         <th>明日</th>
@@ -22,7 +21,6 @@
                     <tbody>
                     @foreach($logs as $log)
                         <tr>
-                            <td>{{ $log->id }}</td>
                             <td>{{ $log->date }}</td>
                             <td>{!! nl2br($log->done) !!}</td>
                             <td>{!! nl2br($log->future) !!}</td>
