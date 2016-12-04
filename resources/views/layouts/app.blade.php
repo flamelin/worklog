@@ -43,7 +43,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ url('/log/create') }}">新增</a></li>
+                        <li><a href="{{ url('/log') }}">歷史日誌</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -1,8 +1,7 @@
 <?php
 
-Route::resource('log', 'LogsController');
-
 Route::group(array('middleware' => 'auth'), function () {
+    Route::resource('log', 'LogsController');
     Route::get('/', 'LogsController@create');
 });
 

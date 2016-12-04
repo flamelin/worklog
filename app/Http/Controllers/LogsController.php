@@ -16,7 +16,8 @@ class LogsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		//
+		$logs = Log::whereUserId(auth::user()->id)->orderBy('id', 'desc')->paginate(20);
+        return view('logs.index', compact('logs'));
 	}
 
 	/**
