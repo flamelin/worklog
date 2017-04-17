@@ -16,4 +16,3 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
 });
 
 Auth::routes();
-// Route::get('/home', 'HomeController@index');
