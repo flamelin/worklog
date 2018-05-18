@@ -18,7 +18,7 @@ class LogsController extends Controller
      */
     public function index()
     {
-        $logs = Log::whereUserId(auth::user()->id)->orderBy('id', 'desc')->paginate(20);
+        $logs = Log::whereUserId(auth()->user()->id)->orderBy('id', 'desc')->paginate(20);
         return view('logs.index', compact('logs'));
     }
 
