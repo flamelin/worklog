@@ -7,8 +7,6 @@ use App\Log;
 use App\Notifications\LogCreated;
 use Illuminate\Http\Request;
 
-// use App\Http\Requests;
-
 class LogsController extends Controller
 {
     /**
