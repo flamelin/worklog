@@ -48,4 +48,22 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
+    // TODO: fix Facade\Ignition\Http\Controllers\ShareReportController not defined
+    // workaround
+    protected function convertExceptionToResponse(Exception $e)
+    {
+        if (config('app.debug')) {
+            $whoops = new \Whoops\Run;
+            $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+
+            return response()->make(
+                $whoops->handleException($e),
+                method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500,
+                method_exists($e, 'getHeaders') ? $e->getHeaders() : []
+            );
+        }
+
+        return parent::convertExceptionToResponse($e);
+    }
 }
